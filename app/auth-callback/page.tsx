@@ -5,8 +5,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { getAuthStatus } from "@/actions/auth-callback.actions";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 const Page = () => {
+  const { getUser } = useKindeBrowserClient();
+  const user = getUser();
+  console.log(user);
+
   const [configId, setConfigId] = useState<string | null>(null);
   const router = useRouter();
 
@@ -17,7 +22,7 @@ const Page = () => {
 
   const { data } = useQuery({
     queryKey: ["auth-callback"],
-    queryFn: async () => await getAuthStatus(),
+    queryFn: async () => await getAuthStatus({user}),
     retry: true,
     retryDelay: 500,
   });

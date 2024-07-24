@@ -6,14 +6,15 @@ import { Loader2 } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { getPaymentStatus } from "@/actions/thank-you-actions";
 import PhonePreview from "@/components/PhonePreview";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 
-const ThankYou = () => {
+const ThankYou = ({ user }: { user: KindeUser | null }) => {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("orderId") || "";
 
   const { data } = useQuery({
     queryKey: ["get-payment-status"],
-    queryFn: async () => await getPaymentStatus({ orderId }),
+    queryFn: async () => await getPaymentStatus({ orderId, user }),
     retry: true,
     retryDelay: 500,
   });
@@ -147,4 +148,3 @@ const ThankYou = () => {
 };
 
 export default ThankYou;
-
