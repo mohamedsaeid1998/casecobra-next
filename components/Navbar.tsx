@@ -4,11 +4,15 @@ import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
+import {
+  RegisterLink,
+  LoginLink,
+  LogoutLink
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 const Navbar = async () => {
-
-  const { getUser } = getKindeServerSession()
-  const user = await getUser()
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
 
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
   return (
@@ -23,12 +27,7 @@ const Navbar = async () => {
               {user ? (
                 <>
                   {" "}
-                  <Link
-                    href="/api/auth/logout"
-                    className={buttonVariants({ size: "sm", variant: "ghost" })}
-                  >
-                    Sign out
-                  </Link>
+                  <LogoutLink className={buttonVariants({ size: "sm", variant: "ghost" })}>Sign out</LogoutLink>
                   {isAdmin ? (
                     <Link
                       href="/dashboard"
@@ -44,7 +43,7 @@ const Navbar = async () => {
                     href="/configure/upload"
                     className={buttonVariants({
                       size: "sm",
-                      className: ' hidden sm:flex items-center gap-1'
+                      className: " hidden sm:flex items-center gap-1",
                     })}
                   >
                     Create case
@@ -55,32 +54,35 @@ const Navbar = async () => {
                 <>
                   <>
                     {" "}
-                    <Link
-                      href="/api/auth/register"
-                      className={buttonVariants({ size: "sm", variant: "ghost" })}
+                    <RegisterLink
+                      className={buttonVariants({
+                        size: "sm",
+                        variant: "ghost",
+                      })}
                     >
                       Sign up
-                    </Link>
-
-                    <Link
-                      href="/api/auth/login"
-                      className={buttonVariants({ size: "sm", variant: "ghost" })}
+                    </RegisterLink>
+                    <LoginLink
+                      className={buttonVariants({
+                        size: "sm",
+                        variant: "ghost",
+                      })}
                     >
                       Login
-
-                    </Link>
+                    </LoginLink>
                     <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
                     <Link
                       href="/configure/upload"
                       className={buttonVariants({
                         size: "sm",
-                        className: ' hidden sm:flex items-center gap-1'
+                        className: " hidden sm:flex items-center gap-1",
                       })}
                     >
                       Create case
                       <ArrowRight className="ml-1.5 size-5" />
                     </Link>
-                  </></>
+                  </>
+                </>
               )}
             </div>
           </div>
