@@ -13,19 +13,20 @@ import { Configuration } from "@prisma/client";
 import { useMutation } from "@tanstack/react-query";
 import { ArrowRight, Check } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Confetti from "react-dom-confetti";
+import { useState } from "react";
+import Confetti from "react-confetti";
 
-const DesignPreview = ({ configuration , user  }: { configuration: Configuration , user: KindeUser | null }) => {
- 
+const DesignPreview = ({
+  configuration,
+  user,
+}: {
+  configuration: Configuration;
+  user: KindeUser | null;
+}) => {
   const router = useRouter();
   const { toast } = useToast();
   const { id } = configuration;
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
-
-  const [showConfetti, setShowConfetti] = useState<boolean>(false);
-  useEffect(() => setShowConfetti(true));
-
   const { color, model, finish, material } = configuration;
 
   const tw = COLORS.find(
@@ -58,19 +59,13 @@ const DesignPreview = ({ configuration , user  }: { configuration: Configuration
   });
 
   const handleCheckout = () => {
-    console.log(user)
-    console.log(id)
     if (user) {
-      console.log(id)
-      createPaymentSession({ configId: id , user});
+      createPaymentSession({ configId: id, user });
     } else {
-      console.log(id)
       localStorage.setItem("configurationId", id);
       setIsLoginModalOpen(true);
     }
   };
-
-
 
   return (
     <>
@@ -78,10 +73,7 @@ const DesignPreview = ({ configuration , user  }: { configuration: Configuration
         aria-hidden="true"
         className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center"
       >
-        <Confetti
-          active={showConfetti}
-          config={{ elementCount: 200, spread: 90 }}
-        />
+        <Confetti width={2000} height={1000} numberOfPieces={1000} recycle={false} />
       </div>
 
       <LoginModal isOpen={isLoginModalOpen} setIsOpen={setIsLoginModalOpen} />

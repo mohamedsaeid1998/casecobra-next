@@ -1,7 +1,6 @@
 'use server'
 
 import { db } from '@/db'
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { KindeUser } from '@kinde-oss/kinde-auth-nextjs/types'
 
 export const getPaymentStatus = async ({ orderId, user }: { orderId: string, user: KindeUser | null }) => {
