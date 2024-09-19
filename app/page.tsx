@@ -94,7 +94,7 @@ export default function Home() {
                   className="absolute w-20 -left-6 -bottom-6 select-none"
                   alt="line-img"
                 />
-                <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
+                <Phone className="w-64" imgSrc="/pexels-photo-2245433.jpeg" />
               </div>
             </div>
           </MaxWidthWrapper>
@@ -232,13 +232,13 @@ export default function Home() {
                 <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-gray-900/5 ring-inset ring-gray-900/10 lg:rounded-2xl">
                   <Image
                     fill
-                    src="/pexels-photo-2245433.jpeg"
+                    src="/pexels-photo-2108845.jpeg"
                     className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-gray-900/10 size-full"
                     alt="horse image"
                   />
                 </div>
 
-                <Phone className="w-60" imgSrc="/pexels-photo-2245433.jpeg" />
+                <Phone className="w-60" imgSrc="/pexels-photo-2108845.jpeg" />
               </div>
             </div>
 
