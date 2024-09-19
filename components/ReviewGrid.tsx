@@ -9,10 +9,10 @@ const ReviewGrid = () => {
 
   const PHONES = [
     '/testimonials/1.jpg',
-    '/testimonials/2.jpg',
-    '/testimonials/3.jpg',
-    '/testimonials/4.jpg',
-    '/testimonials/5.jpg',
+    '/istockphoto-628087738-612x612.jpg',
+    '/pexels-photo-3933880.webp',
+    '/pexels-photo-3157058.webp',
+    '/pexels-photo-5496159.jpeg',
     '/testimonials/6.jpg',
   ]
 
