@@ -17,8 +17,8 @@ export default function Home() {
               <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
                 <div className=" absolute w-28 left-0 -top-20 hidden lg:block">
                   <Image
-                width={112}
-                height={145}
+                    width={112}
+                    height={145}
                     className="w-full"
                     src="/snake-1.png"
                     alt="snake-Photo"
@@ -26,7 +26,9 @@ export default function Home() {
                 </div>
                 <h1 className=" relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
                   Your Image on a{" "}
-                  <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
+                  <span className="bg-green-600 px-1 md:px-2 text-white">
+                    Custom
+                  </span>{" "}
                   Phone Case
                 </h1>
                 <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
@@ -53,11 +55,36 @@ export default function Home() {
 
                 <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
                   <div className="flex -space-x-4 [&_img]:object-cover [&_img]:inline-block [&_img]:size-10 [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-slate-100 ">
-                    <Image width={40} height={40} src="/users/user-1.png" alt="user image" />
-                    <Image width={40} height={40} src="/users/user-2.png" alt="user image" />
-                    <Image width={40} height={40} src="/users/user-3.png" alt="user image" />
-                    <Image width={40} height={40} src="/users/user-4.jpg" alt="user image" />
-                    <Image width={40} height={40} src="/users/user-5.jpg" alt="user image" />
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/users/user-1.png"
+                      alt="user image"
+                    />
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/users/user-2.png"
+                      alt="user image"
+                    />
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/users/user-3.png"
+                      alt="user image"
+                    />
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/users/user-4.jpg"
+                      alt="user image"
+                    />
+                    <Image
+                      width={40}
+                      height={40}
+                      src="/users/user-5.jpg"
+                      alt="user image"
+                    />
                   </div>
 
                   <div className="flex flex-col justify-between items-center sm:items-start">
@@ -81,15 +108,15 @@ export default function Home() {
             <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mt-20 h-fit">
               <div className="relative md:max-w-xl">
                 <Image
-                width={208}
-                height={143}
+                  width={208}
+                  height={143}
                   src="/your-image.png"
                   className="absolute w-40 lg:w-52 left-[174px] -top-20 select-none hidden sm:block lg:hidden xl:block"
                   alt="snake-img"
                 />
                 <Image
-                width={80}
-                height={143}
+                  width={80}
+                  height={143}
                   src="/line.png"
                   className="absolute w-20 -left-6 -bottom-6 select-none"
                   alt="line-img"
@@ -144,8 +171,8 @@ export default function Home() {
                 </div>
                 <div className="flex gap-4 mt-2">
                   <Image
-                width={48}
-                height={48}
+                    width={48}
+                    height={48}
                     className="rounded-full size-12 object-cover"
                     src="/users/user-1.png"
                     alt="user"
@@ -183,8 +210,8 @@ export default function Home() {
                 </div>
                 <div className="flex gap-4 mt-2">
                   <Image
-                width={48}
-                height={48}
+                    width={48}
+                    height={48}
                     className="rounded-full size-12 object-cover"
                     src="/users/user-4.jpg"
                     alt="user"
