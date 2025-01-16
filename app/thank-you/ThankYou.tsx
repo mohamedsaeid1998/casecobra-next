@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
-import { getPaymentStatus } from "@/actions/thank-you-actions";
+import { getPaymentStatus } from "@/actions/thank-you.actions";
 import PhonePreview from "@/components/PhonePreview";
 import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 

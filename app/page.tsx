@@ -40,8 +40,8 @@ export default function Home() {
                 <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                   <div className="space-y-2 [&_li]:flex [&_li]:gap-1.5 [&_li]:items-center [&_li]:text-left [&_svg]:size-5 [&_svg]:shrink-0  [&_svg]:text-green-600 ">
                     <li>
-                      <Check />
-                      High-quality, durable material
+                      <Check />High-quality, durable material
+
                     </li>
                     <li>
                       <Check />5 year print guarantee
